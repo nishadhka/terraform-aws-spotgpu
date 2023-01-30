@@ -42,20 +42,20 @@ variable "ssh-key-dir" {
 
 variable "instance_type" {
   type    = string
-  default = "t4g.small"
+  default = "g4dn.xlarge"
   description = "The instance type to provision the instances from (i.e. p2.xlarge)."
 
 }
 
 variable "spot_price" {
   type    = string
-  default = "0.1"
+  default = "0.3"
   description = "The maximum hourly price (bid) you are willing to pay for the specified instance, i.e. 0.10. This price should not be below AWS' minimum spot price for the instance based on the region."
 }
 
 variable "ebs_volume_size" {
   type    = string
-  default = "2"
+  default = "20"
   description = "The Amazon EBS volume size (1 GB - 16 TB)."
 }
 
@@ -81,7 +81,7 @@ variable "ebs_volume_tags" {
 
 variable "ami_id" {
   type    = string
-  default = "ami-06e9b30b57b32ec3a" # Default AWS Deep Learning AMI (Ubuntu)
+  default = "ami-0c1eda1770212a63b" # Default AWS Deep Learning AMI (Ubuntu)
   description = "The AMI ID to use for each instance. The AMI ID will be different depending on the region, even though the name is the same."
 }
 
