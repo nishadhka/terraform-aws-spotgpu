@@ -47,6 +47,14 @@ variable "instance_type" {
 
 }
 
+#variable "instance_type" {
+#  type    = string
+#  default = "g4dn.12xlarge"
+#  description = "The instance type to provision the instances from (i.e. p2.xlarge)."
+#
+#}
+
+
 variable "spot_price" {
   type    = string
   default = "0.3"
