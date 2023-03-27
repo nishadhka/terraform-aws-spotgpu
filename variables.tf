@@ -63,7 +63,7 @@ variable "spot_price" {
 
 variable "ebs_volume_size" {
   type    = string
-  default = "20"
+  default = "50"
   description = "The Amazon EBS volume size (1 GB - 16 TB)."
 }
 
@@ -89,7 +89,7 @@ variable "ebs_volume_tags" {
 
 variable "ami_id" {
   type    = string
-  default = "ami-0c1eda1770212a63b" # Default AWS Deep Learning AMI (Ubuntu)
+  default = "ami-021f780c9be042e07" # Default AWS Deep Learning AMI (Ubuntu)
   description = "The AMI ID to use for each instance. The AMI ID will be different depending on the region, even though the name is the same."
 }
 
