@@ -42,7 +42,7 @@ variable "ssh-key-dir" {
 
 variable "instance_type" {
   type    = string
-  default = "m4.large"
+  default = "m5d.large"
   description = "The instance type to provision the instances from (i.e. p2.xlarge)."
 
 }
