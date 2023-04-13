@@ -42,14 +42,14 @@ variable "ssh-key-dir" {
 
 variable "instance_type" {
   type    = string
-  default = "g4dn.xlarge"
+  default = "m4.large"
   description = "The instance type to provision the instances from (i.e. p2.xlarge)."
 
 }
 
 #variable "instance_type" {
 #  type    = string
-#  default = "g4dn.12xlarge"
+#  default = "m4.large"
 #  description = "The instance type to provision the instances from (i.e. p2.xlarge)."
 #
 #}
@@ -89,7 +89,7 @@ variable "ebs_volume_tags" {
 
 variable "ami_id" {
   type    = string
-  default = "ami-0a298a1814e103a04" # NVIDIA HPC SDK GPU-Optimized AMI
+  default = "ami-0a298a1814e103a04" # debain AMI 
   description = "The AMI ID to use for each instance. The AMI ID will be different depending on the region, even though the name is the same."
 }
 
