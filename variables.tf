@@ -89,7 +89,7 @@ variable "ebs_volume_tags" {
 
 variable "ami_id" {
   type    = string
-  default = "ami-021f780c9be042e07" # Default AWS Deep Learning AMI (Ubuntu)
+  default = "ami-0a298a1814e103a04" # NVIDIA HPC SDK GPU-Optimized AMI
   description = "The AMI ID to use for each instance. The AMI ID will be different depending on the region, even though the name is the same."
 }
 
