@@ -120,28 +120,6 @@ resource "aws_default_security_group" "main_vpc_security_group" {
     }
 }
 
-resource "aws_spot_instance_request" "aws_dl_custom_spot" {
-    ami                         = "${var.ami_id}"
-    spot_price                  = "${var.spot_price}"
-    instance_type               = "${var.instance_type}"
-    key_name                    = "${var.my_key_pair_name}"
-    monitoring                  = true
-    associate_public_ip_address = true
-    #wait_for_fulfillment        = true
-    count                       = "${var.num_instances}"
-    security_groups             = ["${aws_default_security_group.main_vpc_security_group.id}"]
-    subnet_id                   = "${aws_subnet.main_vpc_subnet.id}"
-    ebs_block_device {
-                                    device_name =  "${var.ebs_volume_device_name}"
-                                    volume_size =  "${var.ebs_volume_size}"
-                                    volume_type =  "${var.ebs_volume_type}"
-                                    tags        =  {Name = "tf_ebs_vol" }
-  }
-    tags = {
-        Name = "aws_dl_custom_spot"
-    }
-}
-
 output "instance_ip" {
   description = "The public ip for ssh access"
   value       = ["${aws_spot_instance_request.aws_dl_custom_spot.*.public_ip}"]

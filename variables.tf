@@ -81,6 +81,6 @@ variable "ami_id" {
 
 variable "num_instances" {
   type    = string
-  default = "1"
+  default = "3"
   description = "The number of AWS EC2 instances to provision."
 }
